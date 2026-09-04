@@ -29,17 +29,14 @@ def Log(Graph):
     return Pos
 def Info(Pos):
     print("Position: ",(Pos[0] -  17),"-",(Pos[1] - 11))
-    fps = 16
-    print(fps)
-    print("info-completed")
 def Move(Pos, Key):
-    if Key.lower() == "w":
+    if Key.lower() == "w" and Pos[0] < 28:
         Pos[0] = Pos[0] - 1
-    elif Key.lower() == "a":
+    elif Key.lower() == "a" and Pos[1] > 1:
         Pos[1] = Pos[1] - 1
-    elif Key.lower() == "s":
+    elif Key.lower() == "s" and Pos[0] > 2:
         Pos[0] = Pos[0] + 1
-    elif Key.lower() == "d":
+    elif Key.lower() == "d" and Pos[1] < 23:
         Pos[1] = Pos[1] + 1
     return Pos
 def Frame(Graph):
@@ -54,7 +51,7 @@ def Fps():
         Frame(Graph)
         Clear()
 with open("logy.txt","w") as Logy:
-    Logy.write(str(r.randint(5,30)))
+    Logy.write(str(r.randint(1,27)))
 with open("logz.txt","w") as Logz:
-    Logz.write(str(r.randint(5,20)))
+    Logz.write(str(r.randint(1,22)))
 Fps()
