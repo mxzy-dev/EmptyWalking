@@ -30,13 +30,13 @@ def Log(Graph):
 def Info(Pos):
     print("Position: ",(Pos[0] -  17),"-",(Pos[1] - 11))
 def Move(Pos, Key):
-    if Key.lower() == "w" and Pos[0] < 28:
+    if Key.lower() == "w" and Pos[0] > 1:
         Pos[0] = Pos[0] - 1
     elif Key.lower() == "a" and Pos[1] > 1:
         Pos[1] = Pos[1] - 1
-    elif Key.lower() == "s" and Pos[0] > 2:
+    elif Key.lower() == "s" and Pos[0] < 33:
         Pos[0] = Pos[0] + 1
-    elif Key.lower() == "d" and Pos[1] < 23:
+    elif Key.lower() == "d" and Pos[1] < 22:
         Pos[1] = Pos[1] + 1
     return Pos
 def Frame(Graph):
