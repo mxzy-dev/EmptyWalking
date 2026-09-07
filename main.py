@@ -36,7 +36,7 @@ def Move(Pos, Key):
         Pos[1] = Pos[1] - 1
     elif Key.lower() == "s" and Pos[0] < 33:
         Pos[0] = Pos[0] + 1
-    elif Key.lower() == "d" and Pos[1] < 22:
+    elif Key.lower() == "d" and Pos[1] < 32:
         Pos[1] = Pos[1] + 1
     return Pos
 def Frame(Graph):
@@ -51,7 +51,7 @@ def Fps():
         Frame(Graph)
         Clear()
 with open("logy.txt","w") as Logy:
-    Logy.write(str(r.randint(1,27)))
+    Logy.write(str(r.randint(1,33)))
 with open("logz.txt","w") as Logz:
-    Logz.write(str(r.randint(1,22)))
+    Logz.write(str(r.randint(1,32)))
 Fps()
